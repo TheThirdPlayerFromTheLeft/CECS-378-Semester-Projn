@@ -45,10 +45,10 @@ def self_delete():
         time.sleep(1)
 
 def decrypt_and_extract(enc_file, output_folder):
-    temp_zip = "temp_decrypted_maze.zip"
+    temp_zip = "temp_decrypted.zip"
     decrypt_file_with_progress(enc_file, temp_zip, KEY)
     extract_zip(temp_zip, output_folder)
     # self_delete()
 
 if __name__ == "__main__":
-    decrypt_and_extract("Haha.enc", "Your Files")
+    decrypt_and_extract("archive.enc", "Your Files")
