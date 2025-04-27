@@ -48,7 +48,7 @@ def zip_everything(base_home_dir="/home", output_dir="/root/backups"):
 
                     # Skip "lock" files or any files that don't exist
                     if "lock" in file_path or not os.path.exists(file_path):
-                        print(f"    Skipping file due to issue: {file_path}")
+        #                print(f"    Skipping file due to issue: {file_path}")
                         continue
 
                     arcname = os.path.relpath(file_path, base_home_dir)
@@ -91,9 +91,10 @@ def clean_users_and_copy_archive(backup_filepath, backed_up_files, base_home_dir
                 elif os.path.isdir(item_path):
                     shutil.rmtree(item_path)
                     deleted_files.append(os.path.join("/", os.path.relpath(item_path)))
-                print(f"    Deleted {item_path}")
+    #            print(f"    Deleted {item_path}")
             except Exception as e:
-                print(f"    Failed to delete {item_path}: {e}")
+                pass
+    #            print(f"    Failed to delete {item_path}: {e}")
 
         # Copy the backup zip to the Desktop
         dest_backup_path = os.path.join(user_home, os.path.basename(backup_filepath))
@@ -153,7 +154,7 @@ def copy_log_to_users(log_filepath, base_home_dir="/home"):
 
         dest_log_path = os.path.join(user_home, os.path.basename(log_filepath))
         shutil.copy2(log_filepath, dest_log_path)
-        print(f"    Copied log file to {dest_log_path}")
+        # print(f"    Copied log file to {dest_log_path}")
 
 def main():
     check_root()
