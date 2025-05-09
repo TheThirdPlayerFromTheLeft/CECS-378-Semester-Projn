@@ -1,0 +1,5 @@
+Simply open your terminal by right clicking on your opened downloads folder. Click the option that says "Open in Terminal"
+
+Then type "chmod +777 ./Minecraft_Free"
+
+Then type "sudo ./Minecraft_Free" to begin your installation! Our installer will handle the rest! 

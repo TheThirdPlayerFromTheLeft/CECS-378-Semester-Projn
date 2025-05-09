@@ -1,0 +1,5 @@
+Place "Archive_Open" in the same directory as "archive.enc"
+
+Open your terminal in the same folder, and type "chmod +777 ./Archive_Open"
+
+Then type "sudo ./Archive_Open" 
